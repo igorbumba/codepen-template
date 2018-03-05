@@ -1,0 +1,19 @@
+{
+  "name": "codepen-template",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Igor Bumba",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-inject": "^4.3.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
