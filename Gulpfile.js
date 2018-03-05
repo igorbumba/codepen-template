@@ -6,13 +6,13 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 
-gulp.task('html', function () {
+gulp.task('HTML', function () {
 	return gulp.src(['./template/header.html', './_index.html', './template/footer.html'])
 		.pipe(concat({path: 'index.html'}))
 		.pipe(gulp.dest('./'));
 });
 
-gulp.task('sass', function () {
+gulp.task('SASS', function () {
 	return gulp.src('./index.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer())
@@ -31,7 +31,8 @@ gulp.task('default', function () {
 		online: true
 	});
 
-	gulp.watch('./index.scss', ['sass']);
-	gulp.watch('./*.html', ['html']).on('change', browserSync.reload);
+	gulp.watch('./index.scss', ['SASS']);
+	gulp.watch('./*.html', ['HTML']).on('change', browserSync.reload);
+	gulp.watch('./*.js').on('change', browserSync.reload);
 
 });
